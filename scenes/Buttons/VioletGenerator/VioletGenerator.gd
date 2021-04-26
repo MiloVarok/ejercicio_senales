@@ -14,7 +14,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
+func generate_block():
+	var newBlockViolet = preload("res://scenes/Blocks/Violet/BlockViolet.tscn")
+	var violetbloks = newBlockViolet.instance()
+	add_child(violetbloks)
+	pass 
 
 func _on_VioletGenerator_button_down():
+	generate_block()
 	pass # Replace with function body.

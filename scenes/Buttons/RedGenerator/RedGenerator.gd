@@ -1,6 +1,5 @@
 extends TextureButton
 
-
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -15,6 +14,13 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func generate_block():
+	var newBlockRed = preload("res://scenes/Blocks/Red/BlockRed.tscn")
+	var redbloks = newBlockRed.instance()
+	add_child(redbloks)
+	pass 
+
 
 func _on_RedGenerator_button_down():
+	generate_block()
 	pass # Replace with function body.
